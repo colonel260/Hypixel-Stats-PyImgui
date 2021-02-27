@@ -6,7 +6,7 @@
 
 ## Dependencies
 
-> You juste need Python
+> You just need Python
 
 ## Installation
 
