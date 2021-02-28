@@ -5,7 +5,8 @@ def save_callback(sender, data):
     print('Settings are still in developpement and not available.')
 
 
-with simple.window("Hypixel Stats", width=500, height=500):
+core.set_main_window_size(500, 500)
+with simple.window("Hypixel Stats"):
     core.add_checkbox("Settings", callback=save_callback)
     core.add_input_text("Player name", hint="Player name")
 
