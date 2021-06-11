@@ -1,16 +1,21 @@
+# Imports
 from dearpygui import core, simple
 
 
-def settings():
-    stats = ("Imagine that this is " + core.get_value("Player name") + "'s stats")
+# Get player's name
+def settings(sender, callback):
+    stats = ("Imagine that this is " +
+             core.get_value("Player name") + "'s stats")
     core.add_input_text("Stats", readonly=True, multiline=True,
                         default_value=stats, parent="Hypixel Stats")
 
 
+# Main window
 core.set_main_window_size(500, 650)
 core.set_main_window_title("Hypixel Stats")
 core.set_style_frame_rounding(4)
 with simple.window("Hypixel Stats"):
+    # Settings
     core.add_input_text("Player name", hint="Player name")
     core.add_checkbox("Sample Settings")
     core.add_checkbox("Sample Settings1")
